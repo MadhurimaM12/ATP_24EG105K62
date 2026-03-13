@@ -1,0 +1,86 @@
+### Create New User
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "username": "raju",
+  "password": "raju",
+  "email": "raju@gmail.com",
+  "age": 20
+}
+
+
+### User Login
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+  "email": "raju@gmail.com",
+  "password": "raju"
+}
+
+
+### Get All Users (Protected Route)
+GET http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiaWF0IjoxNzczNDExMDEzLCJleHAiOjE3NzM0MTExMTN9.KuvW2ig3m5ruTbTDWkpRZFAGWrLNBpymtP51_0ushIQ; Path=/; HttpOnly; SameSite=Lax
+
+
+### Get Logged-in User Details
+GET http://localhost:4000/user-api/user
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiaWF0IjoxNzczNDExMDEzLCJleHAiOjE3NzM0MTExMTN9.KuvW2ig3m5ruTbTDWkpRZFAGWrLNBpymtP51_0ushIQ; Path=/; HttpOnly; SameSite=Lax
+
+
+### Update User by ID
+PUT http://localhost:4000/user-api/users/69b41abb9912bbfa6ba9050a
+Content-Type: application/json
+
+{
+  "username": "manoj",
+  "password": "manoj",
+  "email": "manoj@gmail.com",
+  "age": 22
+}
+
+
+### Delete User by ID
+DELETE http://localhost:4000/user-api/users/USER_OBJECT_ID
+
+
+### Create Product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "productName": "Mobile",
+  "price": 20000,
+  "brand": "Samsung"
+}
+
+
+### Get All Products
+GET http://localhost:4000/product-api/products
+
+
+### Get Product by ID
+GET http://localhost:4000/product-api/products/69b41b2c9912bbfa6ba90510
+
+
+### Update Product by ID
+PUT http://localhost:4000/product-api/products/69b41b2c9912bbfa6ba90510
+Content-Type: application/json
+
+{
+  "productName": "Samsung Galaxy",
+  "price": 25000,
+  "brand": "Samsung"
+}
+
+
+### Delete Product by ID
+DELETE http://localhost:4000/product-api/products/69b41b2c9912bbfa6ba90510
+
+
+### Add Product to User Cart
+PUT http://localhost:4000/user-api/cart/product-id/69b41b2c9912bbfa6ba90510
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiaWF0IjoxNzczNDExMDEzLCJleHAiOjE3NzM0MTExMTN9.KuvW2ig3m5ruTbTDWkpRZFAGWrLNBpymtP51_0ushIQ; Path=/; HttpOnly; SameSite=Lax
