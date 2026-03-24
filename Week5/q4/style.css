@@ -1,0 +1,27 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+.top {
+    background-color: grey;
+    padding: 40px;
+}
+.top button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+.row {
+    display: flex;
+    padding: 20px;
+}
+.box {
+    margin: 10px;
+}
+.box button {
+    padding: 8px;
+}
+footer {
+    padding: 10px;
+}
