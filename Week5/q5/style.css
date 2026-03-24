@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+.top-link {
+    margin: 10px;
+    color: red;
+}
+.main {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.text {
+    width: 60%;
+}
+.row {
+    display: flex;
+}
+.box {
+    background-color: #7a0c0c;
+    color: white;
+    padding: 20px;
+    flex: 1;
+    border-right: 2px solid red;
+}
+.box:last-child {
+    border-right: none;
+}
