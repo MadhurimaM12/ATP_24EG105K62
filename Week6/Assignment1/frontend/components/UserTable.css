@@ -1,0 +1,157 @@
+.user-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.empty-state {
+  padding: 80px 20px;
+  text-align: center;
+  color: #95a5a6;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.empty-state p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.user-table th {
+  padding: 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: all 0.2s ease;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f8f9ff;
+}
+
+.user-table tbody tr.editing {
+  background-color: #fff8e1;
+}
+
+.user-table td {
+  padding: 16px 18px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.user-table td.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.user-table button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
+}
+
+.btn-edit:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.btn-save {
+  background-color: #27ae60;
+  color: white;
+  box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);
+}
+
+.btn-save:hover {
+  background-color: #229954;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.btn-cancel {
+  background-color: #95a5a6;
+  color: white;
+  box-shadow: 0 3px 10px rgba(149, 165, 166, 0.3);
+}
+
+.btn-cancel:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(149, 165, 166, 0.4);
+}
+
+@media (max-width: 768px) {
+  .user-table {
+    font-size: 12px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 12px 10px;
+  }
+
+  .user-table button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .user-table td.actions-cell {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
