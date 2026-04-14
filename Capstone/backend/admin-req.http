@@ -1,0 +1,30 @@
+### Admin login
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "email":"admin@mail.com",
+  "password":"admin"
+}
+
+### Read all USERS & AUTHORS (email)
+GET http://localhost:5000/admin/users
+
+GET http://localhost:5000/admin/authors
+
+
+### Block or Activate User or Author
+PATCH http://localhost:5000/admin/users/1
+Content-Type: application/json
+
+{
+  "isBlocked": true
+}
+
+PATCH http://localhost:5000/admin/authors/1
+Content-Type: application/json
+
+{
+  "isBlocked": true
+}
+
